@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="andy.login.MainActivity"
+    android:background="@drawable/bg_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+        android:id="@+id/imgMain"
+        android:layout_marginTop="110dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/img"/>
+
+        <TextView
+        android:id="@+id/textMain"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GUIDE ON DEMAND"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/imgMain"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp">
+
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="SIGN IN"
+            android:textColor="@color/borders"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:background="@drawable/border_button"/>
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_below="@+id/signInButton"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="SIGN UP"
+            android:textStyle="normal"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textColor="@color/borders"
+            android:textSize="18sp"
+            android:background="@drawable/border_button"/>
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:id="@+id/signWithBlock"
+            android:gravity="center_vertical"
+            android:layout_below="@id/signUpButton"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="70dp"
+                android:background="@color/borders"
+                android:layout_alignParentLeft="true"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Sign in with"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:id="@+id/textSignWith"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/borders"/>
+
+            <View
+                android:layout_width="70dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/borders"
+                android:layout_alignParentRight="true"
+                android:layout_height="1dp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/facebookGoogle"
+            android:layout_below="@id/signWithBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="F"
+                android:gravity="center"
+                android:layout_marginLeft="75dp"
+                android:background="@drawable/border_button"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:id="@+id/facebookButton"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@drawable/border_button"
+                android:text="G"
+                android:layout_marginRight="75dp"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:id="@+id/googleButton"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"/>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By creating an account you agree to our\n User Agreement and Privacy Policy"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:textColor="@color/borders"
+            android:layout_below="@id/facebookGoogle"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
