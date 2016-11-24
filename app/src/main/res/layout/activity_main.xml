@@ -3,154 +3,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="andy.login.MainActivity"
-    android:background="@drawable/bg_gradient">
+    android:background="@drawable/bg_gradient"
+    tools:context="andy.login.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <ImageView
+    <ImageView
         android:id="@+id/imgMain"
-        android:layout_marginTop="110dp"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/img"/>
-
-        <TextView
-        android:id="@+id/textMain"
-        android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GUIDE ON DEMAND"
-        android:layout_marginTop="20dp"
-        android:textSize="24sp"
-        android:textColor="@color/white"
-        android:layout_below="@+id/imgMain"/>
+        android:layout_marginTop="@dimen/marginTop"
+        android:src="@drawable/img" />
 
-    </RelativeLayout>
-
-    <RelativeLayout
+    <TextView
+        android:id="@+id/textMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgMain"
+        android:layout_marginTop="20dp"
+        android:text="GUIDE ON DEMAND"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
 
 
-        <Button
-            android:id="@+id/signInButton"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="SIGN IN"
-            android:textColor="@color/borders"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            android:textSize="18sp"
-            android:textStyle="normal"
-            android:background="@drawable/border_button"/>
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/signUpButton"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:padding="@dimen/button_padding"
+        android:background="@drawable/border_button"
+        android:gravity="center_vertical"
+        android:text="SIGN IN"
+        android:textAlignment="center"
+        android:textColor="@color/borders"
+        android:textSize="18sp"
+        android:textStyle="normal" />
 
-        <Button
-            android:id="@+id/signUpButton"
-            android:layout_below="@+id/signInButton"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="SIGN UP"
-            android:textStyle="normal"
-            android:layout_marginTop="5dp"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            android:textColor="@color/borders"
-            android:textSize="18sp"
-            android:background="@drawable/border_button"/>
-
-        <RelativeLayout
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:id="@+id/signWithBlock"
-            android:gravity="center_vertical"
-            android:layout_below="@id/signUpButton"
-            android:layout_height="wrap_content">
-
-            <View
-                android:layout_width="70dp"
-                android:background="@color/borders"
-                android:layout_alignParentLeft="true"
-                android:layout_height="1dp"
-                android:layout_marginTop="8dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="Sign in with"
-                android:textSize="14sp"
-                android:textAlignment="center"
-                android:id="@+id/textSignWith"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentLeft="true"
-                android:textColor="@color/borders"/>
-
-            <View
-                android:layout_width="70dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/borders"
-                android:layout_alignParentRight="true"
-                android:layout_height="1dp"/>
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/textSignWith"
+        android:layout_marginBottom="20dp"
+        android:padding="@dimen/button_padding"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border_button"
+        android:gravity="center_vertical"
+        android:text="SIGN UP"
+        android:textAlignment="center"
+        android:textColor="@color/borders"
+        android:textSize="18sp"
+        android:textStyle="normal" />
 
 
-        </RelativeLayout>
+    <View
+        android:layout_width="@dimen/line_width"
+        android:layout_height="1dp"
+        android:layout_above="@+id/facebookButton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/marginBottomView"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginTop="8dp"
+        android:background="@color/borders" />
 
-        <RelativeLayout
-            android:id="@+id/facebookGoogle"
-            android:layout_below="@id/signWithBlock"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginTop="20dp">
+    <TextView
+        android:id="@+id/textSignWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/facebookButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="14dp"
+        android:text="Sign in with"
+        android:textAlignment="center"
+        android:textColor="@color/borders"
+        android:textSize="14sp" />
 
-            <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:text="F"
-                android:gravity="center"
-                android:layout_marginLeft="75dp"
-                android:background="@drawable/border_button"
-                android:textSize="14sp"
-                android:textAlignment="center"
-                android:id="@+id/facebookButton"
-                android:layout_alignParentLeft="true"
-                android:textColor="@color/white"/>
-
-            <TextView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:gravity="center"
-                android:background="@drawable/border_button"
-                android:text="G"
-                android:layout_marginRight="75dp"
-                android:textSize="14sp"
-                android:textAlignment="center"
-                android:id="@+id/googleButton"
-                android:layout_alignParentRight="true"
-                android:textColor="@color/white"/>
+    <View
+        android:layout_width="@dimen/line_width"
+        android:layout_height="1dp"
+        android:layout_above="@+id/facebookButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/marginBottomView"
+        android:layout_marginRight="@dimen/button_margin"
+        android:layout_marginTop="8dp"
+        android:background="@color/borders" />
 
 
-        </RelativeLayout>
+    <TextView
+        android:id="@+id/facebookButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/txt_info"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/marginGF"
+        android:background="@drawable/border_button"
+        android:gravity="center"
+        android:text="f"
+        android:padding="@dimen/button_padding"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/googleButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/txt_info"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/marginGF"
+        android:background="@drawable/border_button"
+        android:gravity="center"
+        android:text="G+"
+        android:padding="@dimen/button_padding"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="By creating an account you agree to our\n User Agreement and Privacy Policy"
-            android:textSize="14sp"
-            android:textAlignment="center"
-            android:textColor="@color/borders"
-            android:layout_below="@id/facebookGoogle"/>
-
-
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/txt_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:text="By creating an account you agree to our\n User Agreement and Privacy Policy"
+        android:textAlignment="center"
+        android:textColor="@color/borders"
+        android:textSize="14sp" />
 
 
 </RelativeLayout>
